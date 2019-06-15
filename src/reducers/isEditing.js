@@ -5,7 +5,6 @@ let isEditingReducer=(state=false, action)=>{
         default :
         return state;
     }
-return state;
 }
 
 module.exports = isEditingReducer;

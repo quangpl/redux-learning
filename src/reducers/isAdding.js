@@ -5,7 +5,6 @@ let isAddingReducer=(state=false, action)=>{
         default :
         return state;
     }
-return state;
 }
 
 module.exports = isAddingReducer;

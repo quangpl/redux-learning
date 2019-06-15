@@ -3,12 +3,7 @@ import '../App.css'
 import {connect} from 'react-redux';
 let {toggle,addItem} = require('../actions');
 class NoteForm extends React.Component{
-  constructor(props){
-    super(props);
-  
-  }
 
- 
   handleToggle(){
     let {dispatch} = this.props;
     dispatch(toggle())

@@ -12,7 +12,6 @@ let mangReducer=(state=['Android','iOS','Fullstack'],action)=>{
         default :
         return state;
     }
-return state;
 }
 
 module.exports = mangReducer;
