@@ -34,3 +34,7 @@
 .list{
   margin:50px;
 }
+.item{
+  display: inline-block;
+  margin:10px;
+}

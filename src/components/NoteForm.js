@@ -1,5 +1,6 @@
 import React from 'react';
 import store from '../example'
+import '../App.css'
 class NoteForm extends React.Component{
   constructor(props){
     super(props);
@@ -8,13 +9,7 @@ class NoteForm extends React.Component{
     }
   }
 
-  handleDisplatch(){
-    store.dispatch({
-      type:'ADD_ITEM',
-      item:'Androiddeveloper'
-  })
-  console.log(store.getState());
-  }
+ 
   handleToggle(){
     this.setState({
       isAdding:!this.state.isAdding
@@ -35,7 +30,6 @@ class NoteForm extends React.Component{
   <button> Add</button>
   </form>     
   <button onClick={this.handleToggle.bind(this)}>+</button>
-  <button onClick={this.handleDisplatch.bind(this)}>dispatch</button>
     </div>
   );
   return <button onClick={this.handleToggle.bind(this)}>+</button>
