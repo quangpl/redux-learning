@@ -1,4 +1,4 @@
-This is my learning project about `redux . For install :
+This is my learning project about `redux` with `react` . For install :
 
 ```
 git clone https://github.com/quangpl/redux-learning/
