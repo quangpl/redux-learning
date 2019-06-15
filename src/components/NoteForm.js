@@ -28,7 +28,7 @@ class NoteForm extends React.Component{
   if(this.props.isAdding) return (
     <div>
  <form onSubmit={this.handleSubmit.bind(this)}>
-   <input type="text" ref="txt" placeholder="Enter text"></input>
+  <input type="text" ref="txt" placeholder="Enter text"></input>
   <button> Add</button>
   </form>     
   <button onClick={this.handleToggle.bind(this)}>+</button>

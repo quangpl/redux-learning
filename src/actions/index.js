@@ -18,4 +18,15 @@ function toggle(){
     }
 }
 
-module.exports = {addItem, deleteItem, toggle}
+
+function editItem(item,index){
+    return {
+        type:'EDIT_ITEM',
+        item:item,
+        index:index
+    }
+}
+
+
+
+module.exports = {addItem, deleteItem, toggle,editItem}

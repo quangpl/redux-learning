@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import '../App.css'
 class List extends React.Component{
 
-    render(){
+  render(){
   return (
     <div className="list">
      <h3>List</h3>
