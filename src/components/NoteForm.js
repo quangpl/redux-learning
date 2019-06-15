@@ -1,29 +1,31 @@
 import React from 'react';
-import store from '../example'
 import '../App.css'
+import {connect} from 'react-redux';
+let {toggle,addItem} = require('../actions');
 class NoteForm extends React.Component{
   constructor(props){
     super(props);
-    this.state={
-      isAdding:false
-    }
+  
   }
 
  
   handleToggle(){
-    this.setState({
-      isAdding:!this.state.isAdding
-    });
+    let {dispatch} = this.props;
+    dispatch(toggle())
   }
+
   handleSubmit(e){
     e.preventDefault();
-    let { handleAdd }= this.props;
-    handleAdd(this.refs.txt.value);
+    let {dispatch} = this.props;
+    dispatch(addItem(this.refs.txt.value))
     this.refs.txt.value='';
+    dispatch({
+      type:'TOGGLE_IS_ADDING'
+    })
 
   }
     render(){
-  if(this.state.isAdding) return (
+  if(this.props.isAdding) return (
     <div>
  <form onSubmit={this.handleSubmit.bind(this)}>
    <input type="text" ref="txt" placeholder="Enter text"></input>
@@ -36,4 +38,8 @@ class NoteForm extends React.Component{
     }
 }
 
-export default NoteForm;
+export default connect(function (state){
+  return {
+    isAdding: state.isAdding
+  }
+})(NoteForm);
